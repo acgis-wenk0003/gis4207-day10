@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGisBLL", "MyGisBLL\MyGisBLL.csproj", "{7A368E11-0727-4AA5-BFAD-9DF6F73A0CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGisConsole", "MyGisConsole\MyGisConsole.csproj", "{76B0C671-8C05-4E03-9E02-2096D5E07574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGisBLLTests", "MyGisBLLTests\MyGisBLLTests.csproj", "{4FB52DB9-7BE3-411D-B33C-9848D740D7EF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A368E11-0727-4AA5-BFAD-9DF6F73A0CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A368E11-0727-4AA5-BFAD-9DF6F73A0CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A368E11-0727-4AA5-BFAD-9DF6F73A0CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A368E11-0727-4AA5-BFAD-9DF6F73A0CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B0C671-8C05-4E03-9E02-2096D5E07574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B0C671-8C05-4E03-9E02-2096D5E07574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B0C671-8C05-4E03-9E02-2096D5E07574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B0C671-8C05-4E03-9E02-2096D5E07574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB52DB9-7BE3-411D-B33C-9848D740D7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB52DB9-7BE3-411D-B33C-9848D740D7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB52DB9-7BE3-411D-B33C-9848D740D7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB52DB9-7BE3-411D-B33C-9848D740D7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

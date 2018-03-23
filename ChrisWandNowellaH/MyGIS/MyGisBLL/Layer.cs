@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyGisBLL
 {
-    class Layer
+    public class Layer
     {
+        public string Name = "";
     }
 }

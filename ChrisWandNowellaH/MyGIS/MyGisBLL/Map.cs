@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyGisBLL
 {
-    class Map
+    public class Map
     {
+        public string Name = "";
+        private string Layers = "";
+
     }
 }
