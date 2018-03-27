@@ -8,6 +8,7 @@ namespace MyGisBLL
 {
     public class Layer
     {
-        public string Name = "";
+        private string _name = "";
+        public int Name { get; set; }
     }
 }
