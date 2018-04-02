@@ -24,6 +24,11 @@ namespace MyGisBLL
         public Layer[] Layers
         {
             get { return _layers; }
+            set {
+                try { bool t}
+                catch (IndexOutOfRangeException)
+                { return null; };
+            }
         }
         public void AddLayer(Layer layer)
         {
@@ -37,7 +42,7 @@ namespace MyGisBLL
             int indexcount=0;
             foreach (Layer ALayer in _layers)
             {
-
+                
                 if (ALayer.Name.Equals(LayerName))
                 {
                     output = ALayer;

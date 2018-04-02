@@ -49,7 +49,7 @@ namespace MyGisBLLTests
             testMap.AddLayer(addl3);
             Layer actual =  testMap.GetLayerByName("Cuba");
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.Name, actual.Name);
         }
         [TestMethod]
         public void test_removeLayer()
@@ -64,6 +64,21 @@ namespace MyGisBLLTests
             testMap.AddLayer(addl3);
             testMap.RemoveLayer(3);
             int actual = testMap.LayerCount;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void testinvalidindex()
+        {
+            Layer expected = new Layer();
+            expected.Name = null;
+            Map testMap = new Map();
+            Layer addl1 = new Layer();
+            Layer addl2 = new Layer();
+            Layer addl3 = new Layer();
+            testMap.AddLayer(addl1);
+            testMap.AddLayer(addl2);
+            testMap.AddLayer(addl3);
+            Layer actual = testMap.Layers[5];
             Assert.AreEqual(expected, actual);
         }
     }
