@@ -10,46 +10,78 @@ namespace MyGisBLL
     public class Map
     {
         private Layer[] _layers = new Layer[0];
+        private string _name;
         public int LayerCount {
             get { return _layerCount; }
-            }
+            set { _layerCount = _layers.Length; }
+        }
         private int _layerCount;
         public string Name
         {
-            get; set;
+            get { return _name; }
+            set { _name = value; }
         }
-        private Layer[] Layers
+        public Layer[] Layers
         {
             get { return _layers; }
         }
-        public void AddLayer (Layer layer)
+        public void AddLayer(Layer layer)
         {
             Array.Resize(ref _layers, _layers.Length + 1);
             _layerCount += 1;
-            _layers[_layers.Length-1]= layer;
+            _layers[_layers.Length - 1] = layer;
         }
         public Layer GetLayerByName(string LayerName)
         {
             Layer output;
+            int indexcount=0;
             foreach (Layer ALayer in _layers)
             {
 
                 if (ALayer.Name.Equals(LayerName))
                 {
-                   output= ALayer;
+                    output = ALayer;
                     return output;
-                                                     
-                } 
-                if (!ALayer.Name.Equals(LayerName) & !_layers[_layers.Length].Name.Equals(LayerName))
+
+                }
+                if (!ALayer.Name.Equals(LayerName) & _layers.Length.Equals(indexcount))
                 {
-                    output= null;
+                    output = null;
                     return null;
                 }
-                else { continue; }
+                else {
+                    indexcount += 1;
+                    continue;
+                }
 
             }
             return null;
         }
-
+        public void RemoveLayer(int layerIndex)
+        {
+            int removeIndex = Array.IndexOf(_layers, layerIndex - 1);
+            List<Layer> new_layers = _layers.OfType<Layer>().ToList();
+            List<Layer> outputLayers= new List<Layer>();
+            if (removeIndex <= LayerCount - 1)
+            {
+                int indexcount = 0;
+                foreach (Layer lLayer in new_layers)
+                {
+                    if (indexcount == removeIndex)
+                    {
+                        indexcount += 1;
+                        
+                    }
+                    else {
+                        indexcount += 1;
+                        outputLayers.Add(lLayer);
+                        }
+                }
+            }
+            _layers = outputLayers.ToArray<Layer>();
+            Array.Resize(ref _layers, _layers.Length-2);
+        }
     }
+    
 }
+
